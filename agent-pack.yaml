@@ -67,10 +67,11 @@ languages:
       MCP_CONFIG_ABORTED: 'Configuración cancelada.'
 
 llm:
-  provider: openai
-  model: gpt-5.4-mini
-  temperature: 0.2
-  agentPrompt: >-
+   provider: openai
+   model: gpt-5.4-mini
+   baseUrl: https://api.groq.com/openai/v1
+   temperature: 0.2
+   agentPrompt: >-
     "You are a GitHub assistant agent.\n\
       - Default assumption: every user request is about GitHub. When the user mentions repos, issues, PRs, code, branches, commits, users, or organizations, immediately use the matching GitHub MCP tool. Do NOT ask for clarification if you can infer the intent.\n\
       - Language: answer in the user's language (fallback: English).\n\
